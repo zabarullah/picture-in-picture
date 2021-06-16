@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html {
+    box-sizing: border-box; /* The box-sizing property allows us to include the padding and border in an element's  total width and height */
+}
+
+body {
+    margin: 0;
+    min-height: 100vh; /* 100 viewport height is the full height of the page - background will spread the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(61, 61, 61);
+}
+
+.button-container   { /* to make the button look 3d */
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7); /* inset (shadow inside of object) then figures for shadow: horizontal Vertical blur spread (how far shadow spreads) Color*/
+}
+
+button {
+    cursor: pointer; /* chances cursor to pointer when you hover on it */
+    outline: none; /* prevents blue outline when a button is clicked */
+    width: 120px;
+    height: 75px;
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 5px black;  /* text-shadow works similar to box-shadow property */
+    background: linear-gradient(to top, #696969, #575757);
+    border: 2px solid black;
+    border-radius: 7px;
+    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4),  0 12px 12px 0 rgba(0, 0, 0, 0.3);
+
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #696969, #575757);  /* changed from top on the button to bottom so it flips when hovered*/
+}
+
+button:active {
+    transform: translateY(3px); /* this willpush the button down by 3px when pressed hence translateY was used */
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
